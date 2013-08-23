@@ -1,0 +1,34 @@
+{
+    "name": "layer-tiler",
+    "version": "0.8",
+    "description": "",
+    "homepage": "https://github.com/dfilatov/jspromise",
+    "keywords": [
+        "map",
+        "tiles",
+        "layer"
+    ],
+    "author": {
+        "name": "Dmitry Poklonskiy",
+        "email": "dmk@yandex-team.ru"
+    },
+    "contributors": [{
+        "name": "Dmitry Poklonskiy",
+        "email": "dmk@yandex-team.ru"
+    }],
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/dimik/layer-tiler.git"
+    },
+    "dependencies": {
+        "canvas": ""
+    },
+    "main": "lib/layer-tiler",
+    "engines": {
+        "node": ">= 0.8"
+    },
+    "readmeFilename": "README.md",
+    "bugs": {
+        "url": "https://github.com/dimik/layer-tiler/issues"
+    }
+}
