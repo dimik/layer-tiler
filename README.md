@@ -15,12 +15,13 @@ Example
 
 ```javascript
 
-var LayerTiler = require('layer-tiler.js'),
-    destination = __dirname + '/images',
+var LayerTiler = require('layer-tiler'),
+    destination = __dirname + '/tiles',
+    source = __dirname + '/source',
     tiler = new LayerTiler({ output: destination }),
     start = new Date;
 
-tiler.openSource(destination + '/large-image.jpg')
+tiler.openSource(source + '/large-image.jpg')
     .then(function () {
         tiler.render()
             .then(function () {
