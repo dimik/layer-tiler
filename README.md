@@ -1,4 +1,31 @@
 layer-tiler
 ===========
 
-NodeJS tiler for users layers creation
+NodeJS image tiler for user layers creation.
+
+Description
+============
+
+This class creates set of map layer tiles from high-resolution image.
+using <a href="http://nodejs.org/">NodeJS</a> platform and <a href="https://github.com/learnboost/node-canvas">node-canvas</a>
+It supports jpg and png image formats.
+
+Example
+------------
+
+```javascript
+
+var LayerTiler = require('layer-tiler.js'),
+    destination = __dirname + '/images',
+    tiler = new LayerTiler({ output: destination }),
+    start = new Date;
+
+tiler.openSource(destination + '/large-image.jpg')
+    .then(function () {
+        tiler.render()
+            .then(function () {
+                console.log('Rendered in %ds', Math.ceil((new Date - start) / 1000));
+            });
+    });
+
+```
