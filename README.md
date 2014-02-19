@@ -6,7 +6,7 @@ NodeJS image tiler for user layers creation.
 Description
 ============
 
-This class creates set of map layer tiles from high-resolution image.
+This class creates a set of map layer tiles from high-resolution image
 using <a href="http://nodejs.org/">NodeJS</a> platform and <a href="https://github.com/learnboost/node-canvas">node-canvas</a>
 It supports jpg and png image formats.
 
