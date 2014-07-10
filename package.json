@@ -20,7 +20,9 @@
         "url": "http://github.com/dimik/layer-tiler.git"
     },
     "dependencies": {
-        "canvas": "~1.1.4"
+        "canvas": "~1.1.5",
+        "vow": "~0.4.4",
+        "vow-node": "~0.2.0"
     },
     "devDependencies": {
         "mocha": "*",
