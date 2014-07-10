@@ -2,7 +2,6 @@
     "name": "layer-tiler",
     "version": "0.8",
     "description": "",
-    "homepage": "https://github.com/dfilatov/jspromise",
     "keywords": [
         "map",
         "tiles",
@@ -21,7 +20,11 @@
         "url": "http://github.com/dimik/layer-tiler.git"
     },
     "dependencies": {
-        "canvas": ""
+        "canvas": "~1.1.4"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "should": "*"
     },
     "main": "lib/layer-tiler",
     "engines": {
