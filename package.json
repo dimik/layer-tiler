@@ -1,7 +1,7 @@
 {
     "name": "layer-tiler",
-    "version": "0.8",
-    "description": "",
+    "version": "0.0.1",
+    "description": "Creates tiles from high resolution image",
     "keywords": [
         "map",
         "tiles",
@@ -21,16 +21,20 @@
     },
     "dependencies": {
         "canvas": "~1.1.5",
+        "ym": "0.1.0",
         "vow": "~0.4.4",
-        "vow-node": "~0.2.0"
+        "vow-fs": "~0.3.2",
+        "vow-node": "~0.2.0",
+        "vow-queue": "0.3.1",
+        "inherit": "~2.2.2"
     },
     "devDependencies": {
         "mocha": "*",
         "should": "*"
     },
     "main": "lib/layer-tiler",
-    "engines": {
-        "node": ">= 0.8"
+    "engines" : {
+        "node" : ">= 0.8.0"
     },
     "readmeFilename": "README.md",
     "bugs": {
