@@ -25,7 +25,7 @@ overlays.forEach(function (overlay) {
     ];
     var bounds = [ sw, ne ];
 
-    console.log(path.join(folder, icon), bounds);
+    console.log('file: ', path.join(folder, icon), '\nbounds: ', bounds);
 
     var start = new Date;
     var tiler = new LayerTiler({
@@ -40,7 +40,7 @@ overlays.forEach(function (overlay) {
         .done(function () {
             console.log('Rendered in %ds', Math.ceil((new Date - start) / 1000));
         }, function (err) {
-            console.log('eeeerrrr', err, arguments);
+            console.log('error', err);
         }, function (progress) {
             console.log(progress);
         });
