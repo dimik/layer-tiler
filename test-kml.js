@@ -5,12 +5,15 @@ var fs = require('fs');
 var path = require('path');
 
 var folder = 'accenture';
+var output = 'build';
 var kml = fs.readFileSync(path.join(folder, 'doc.kml'));
 var doc = libxml.parseXml(kml.toString());
 var ns = doc.root().namespace().href();
 
-// var overlays = doc.find('//xmlns:GroundOverlay', ns)
-var overlays = doc.find("//xmlns:GroundOverlay[xmlns:Icon/xmlns:href='block-L5-1-1.jpg'][1]", ns)
+var overlays = doc.find('//xmlns:GroundOverlay', ns)
+// var overlays = doc.find("//xmlns:GroundOverlay[xmlns:Icon/xmlns:href='block-L5-1-1.jpg'][1]", ns)
+
+fs.mkdirSync(path.resolve(output));
 
 overlays.forEach(function (overlay) {
     var icon = overlay.get('xmlns:Icon/xmlns:href', ns).text();
@@ -27,8 +30,11 @@ overlays.forEach(function (overlay) {
 
     console.log('file: ', path.join(folder, icon), '\nbounds: ', bounds);
 
+    fs.mkdirSync(path.resolve(path.join(output, icon)));
+
     var start = new Date;
     var tiler = new LayerTiler({
+        output: path.join(output, icon),
         maxZoom: 19,
         bounds: bounds
     });
