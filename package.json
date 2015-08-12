@@ -1,6 +1,6 @@
 {
     "name": "layer-tiler",
-    "version": "0.8",
+    "version": "0.0.8",
     "description": "",
     "keywords": [
         "map",
@@ -33,6 +33,7 @@
         "node": ">= 0.8"
     },
     "readmeFilename": "README.md",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/dimik/layer-tiler/issues"
     }
